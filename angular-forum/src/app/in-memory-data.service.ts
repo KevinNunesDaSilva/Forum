@@ -8,12 +8,12 @@ import { Post } from './post';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const posts = [
-      { id: 1, name: 'post 1', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' },
-      { id: 2, name: 'post 2', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' },
-      { id: 3, name: 'post 3', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' },
-      { id: 4, name: 'post 4', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' },
-      { id: 5, name: 'post 5', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' },
-      { id: 6, name: 'post 6', description: 'asdasdasfhgdhsfadfgkvnrgekatgch' }
+      { id: 1, name: 'post 1', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "1" },
+      { id: 2, name: 'post 2', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "1"  },
+      { id: 3, name: 'post 3', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "2"  },
+      { id: 4, name: 'post 4', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "2"  },
+      { id: 5, name: 'post 5', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "3"  },
+      { id: 6, name: 'post 6', description: 'asdasdasfhgdhsfadfgkvnrgekatgch', category: "4"  }
     ];
     return {posts};
   }

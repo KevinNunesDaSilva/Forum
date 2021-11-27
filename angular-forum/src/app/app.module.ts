@@ -9,12 +9,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { PostDetailComponent } from './post-detail/post-detail.component';
+import { CategoryListComponent } from './category-list/category-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    PostDetailComponent
+    PostDetailComponent,
+    CategoryListComponent
   ],
   imports: [
     BrowserModule,
