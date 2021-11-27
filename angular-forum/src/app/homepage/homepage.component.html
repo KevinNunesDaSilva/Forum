@@ -1,3 +1,3 @@
-<div class="" *ngFor="let post of posts" style="color: black;">
+<div class="" *ngFor="let post of posts.slice().reverse()" routerLink="/post/{{post.id}}">
     {{post.name}}
 </div> 
