@@ -36,4 +36,7 @@ export class CategoryListComponent implements OnInit {
     this.postService.getPosts()
       .subscribe(posts => this.posts = posts);
   }
+  goBack(): void {
+    this.location.back();
+  }
 }
