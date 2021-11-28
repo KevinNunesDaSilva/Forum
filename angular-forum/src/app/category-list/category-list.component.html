@@ -1,7 +1,13 @@
-<span *ngIf="category">
-    <div class="" *ngFor="let post of posts">
-        <div class="" *ngIf="post.category === category.id">
-            {{post.name}}
+<div class="container" *ngIf="category">
+    <div class="buttons d-flex justify-content-between w-100">
+            <button type="button" class="btn btn-outline-secondary mb-2 w-25" (click)="goBack()">Back</button>
+    <button type="button" class="btn btn-outline-secondary mb-2 w-25" routerLink="">Create post</button>
+    </div>
+
+    <h1 class="text-center">{{category.name}}</h1>
+    <div *ngFor="let post of posts.slice().reverse()">
+        <div *ngIf="post.category === category.id">
+            <div class="text-center w-75 m-auto border p-3 mb-2 post" routerLink="/post/{{post.id}}">{{post.name}}</div>
         </div>
     </div>
-</span>
+</div>

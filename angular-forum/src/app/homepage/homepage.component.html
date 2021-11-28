@@ -1,7 +1,16 @@
-<span *ngFor="let post of posts.slice().reverse()" routerLink="/post/{{post.id}}">
-    {{post.name}}
-</span>
+<div class="container row">
+    <h1 class="text-center my-3">Homepage</h1>
+    <div class="col-md-10">
+        <div class="text-center w-75 m-auto border p-3 mb-2 post" *ngFor="let post of posts.slice().reverse()"
+            routerLink="/post/{{post.id}}">
+            {{post.name}}
+        </div>
+    </div>
 
-<span *ngFor="let category of categories">
-    <button  routerLink="/category/{{category.id}}">{{category.name}}</button>
-</span>
+
+    <div class="col-md-2">
+        <h3 class="text-center">Categories:</h3>
+        <div *ngFor="let category of categories">
+            <button type="button" class="btn btn-outline-secondary mb-2 w-100" routerLink="/category/{{category.id}}" >{{category.name}}</button> </div>
+    </div>
+</div>

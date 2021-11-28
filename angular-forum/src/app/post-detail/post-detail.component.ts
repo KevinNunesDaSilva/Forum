@@ -28,5 +28,7 @@ export class PostDetailComponent implements OnInit {
     this.postService.getPost(id)
       .subscribe(post => this.post= post);
   }
-
+  goBack(): void {
+    this.location.back();
+  }
 }
